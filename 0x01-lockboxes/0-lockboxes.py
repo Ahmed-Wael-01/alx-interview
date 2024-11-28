@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 def canUnlockAll(boxes):
     keys = boxes[0].copy()
 
