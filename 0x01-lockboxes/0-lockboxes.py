@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""this is a code to solve the lock boxes problem"""
 
 
 def canUnlockAll(boxes):
+    """a method to solve and decide whether
+    a set of boxes is solvable or not"""
+
     keys = boxes[0].copy()
 
     for i in keys:
