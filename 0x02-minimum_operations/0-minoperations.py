@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """calculating the minimum operations needed to result specific digit"""
 
 
