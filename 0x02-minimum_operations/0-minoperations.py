@@ -4,16 +4,18 @@
 
 def minOperations(n):
     """returns the minimum operations"""
-    if n == 1:
+    if n < 2:
         return 0
 
     primes = []
-    for i in range(2, int(n / 2) + 1):
+    i = 2
+    while i <= (n / 2):
         if n % i == 0:
             primes.append(i)
             n = int(n / i)
             i = 2
-            continue
-    primes.append(n)
-    n = 0
+        i = i + 1
+    if n != 1:
+        primes.append(n)
+
     return sum(primes)
