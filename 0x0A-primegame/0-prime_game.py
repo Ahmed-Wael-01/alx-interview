@@ -7,6 +7,10 @@ def isWinner(x, nums):
     ben = 0
     maria = 0
     prm_num = 0
+
+    if x <= 0:
+        return None
+
     for i in nums:
         if i == 1:
             ben = ben + 1
