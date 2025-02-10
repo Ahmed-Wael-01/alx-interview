@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """reading and processing a stream of data"""
 import sys
-import re
 
 
 status_codes = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0,
@@ -13,7 +12,7 @@ count = 0
 try:
     for line in sys.stdin:
         lines_l = line.split(" ")
-        if len(lines_list) > 5:
+        if len(lines_l) > 5:
             st_code = lines_l[-2]
             size = int(lines_l[-1])
 
@@ -27,7 +26,6 @@ try:
                 count = 0
 
                 print('File size: {}'.format(total_size))
-
                 for key, val in sorted(status_codes.items()):
                     if val != 0:
                         print('{}: {}'.format(key, val))
